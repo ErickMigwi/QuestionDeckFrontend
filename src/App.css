@@ -1,38 +1,986 @@
-.App {
-  text-align: center;
+*{
+  margin:0px;
+  padding:0px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button:hover{
+  cursor: pointer;
+}
+#mainNavPage{
+  display: flex;
+  flex-direction: column;
+}
+#navBar{
+  display: flex;
+  flex-direction:  row;
+  background-color:#BE161E;
+  justify-content: space-between;
+  height: 7vh;
+  align-items: center;
+  width: 100vw;
+  margin-bottom: 20px;
+ 
+}
+#navLink{
+  color: White;
+  text-decoration: none;
+
+}
+#nav{
+
+  display: flex;
+  flex-direction: row;
+  gap: 7px;
+
+  padding:35px
+}
+#navBar2{
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+#howItWorks{
+  display: flex;
+  align-items: center;
+  padding-right: 10px;
+  color: #7D7D7D;
+  gap: 10px;
+}
+#Post{
+  background-color: #222222;
+  color: white;
+  width: 15vw;
+  height: 7vh;
+  display: flex;
+ justify-content: center;
+align-items: center;
+}
+#Post:hover{
+  cursor: pointer;
+}
+#nameofWebApp{
+  color: #BE161E;
+}
+#AboutWebApp{
+  font-style: italic;
+  color: #7D7D7D;
+}
+#browseQuestions{
+ 
+  align-items: center;
+  justify-content: space-between;
+  color: #7D7D7D;
+  text-decoration: none;
+
+  font-size: 1.7rem;
+}
+#browseQuestions:hover{
+  cursor: pointer;
+  color: #BE161E;
+}
+#homeImge{
+  padding-top: 30px;
+  width: 100%;
+  height: 50vh;
+}
+#containerHome{
+  margin-top: 15px;
+  margin-bottom: 15px;
+ background-image: url('C:\Users\HP\questiondeck\client\src\Components\Home.jpg');
+ width: 100%;
+ height:90vh;
+ background-size: cover;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ 
+}
+#haveAQustion{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color:white;
+}
+#search{
+  margin-top: 45px;
+  display: flex;
+  justify-content: space-between;
+  width: 59vw;
+}
+#search input{
+  width: 50vw;
+  height: 7vh;
+  font-size: 17px;
+}
+#search button{
+  color: white;
+  background-color: #BE161E;
+  width: 7vw;
+  border: none;
+  font-size: 17px;
+}
+#Q{
+  margin-bottom: 30px;
+  font-size: 50px;
+}
+#guide{
+  font-size: 20px;
+  font-style: italic;
+}
+#mainFooter{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+background-color: #191919;
+color: gray;
+
+  height: 50vh;
+  font-size: 20px;
+}
+/* #us{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+  background-image: url('C:\Users\HP\Desktop\questiondeck\client\src\footer.png');
+  background-size: cover;
+  
+} */
+#footerHeader{
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 30px;
+  align-items: center;
+}
+#nameofWebApp2{
+  color: white;
+  font-size: 40px;
+}
+#AboutWebApp2{
+  color: white;
+}
+#copy{
+  color: white;
+}
+#copyright{
+  display: flex;
+  justify-content: center;
+  
+  
+  align-items: center;
+}
+#loginHeader{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#loginDetails{
+  
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center;
+}
+#alignH-Inp input{
+  width: 30vw;
+  height: 5vh;
+}
+#submitLogin{
+  width: 100%;
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+#alignH-Inp{
+  margin-top: 20px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+margin-bottom: 15px;
+gap: 10px;
+}
+#loginBtn{
+  background-color: #BE161E;
+  color: white;
+  width: 7vw;
+  height: 4vh;
+  border-radius: 10px;
+  border: none;
+
+}
+#login{
+  margin-top: 50px;
+}
+#signUp{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 100vh;
+  
+}
+#signUp input{
+  margin-bottom: 50px;
+  width: 30vw;
+  height: 5vh;
+}
+#join{
+  background-color: #BE161E;
+  color: white;
+  height: 5vh;
+  width: 10vw;
+  border-radius: 15px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#postQuestion{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 50vh;
+}
+#postQuestion input{
+ 
+  width: 30vw;
+  height: 5vh;
+}
+#select{
+  width: 30vw;
+  height: 5vh;
+  font-size: 17px;
+}
+#questionTitle{
+  margin-bottom: 50px;
+}
+#publishQuestion{
+  background-color: #BE161E;
+  color: white;
+  border-radius: 15px;
+  height: 5vh;
+  width: 15vw;
+box-shadow:  4px 4px 4px rgba(245, 5, 5, 0.3);
+}
+#questionAsked{
+  display: flex;
+  flex-direction: column;
+  /* align-items:  center; */
+  margin-bottom: 50vh;
+  justify-content: center;
+  
+
+}
+#questions{
+  margin-bottom: 50px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#add{
+  display: flex;
+gap: 50px;
+align-items: center;
+}
+#add button{
+  background-color: #BE161E;
+  color: white;
+  border-radius: 15px;
+  width: 7vw;
+  height: 4vh;
+}
+#rr{
+  margin-bottom: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+#askedQuestions{
+  margin-bottom: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+}
+
+#headingQuestionAsked{
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+#questions{
+  margin-bottom: 30px;
+}
+#deleteBtn{
+  background-color: #BE161E;
   color: white;
+  border-radius: 15px;
+  width: 7vw;
+  height: 4vh;
+}
+#profile{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 40vh;
 }
 
-.App-link {
-  color: #61dafb;
+
+
+#bb{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#nm{
+  margin-bottom: 50vh;
+}
+#loginNavlink{
+  background-color: #BE161E;
+  display: flex;
+  justify-content: center;
+  width: 10vw;
+  height: 4vh;
+  margin-top: 15px;
+  border-radius: 15px;
+  color: aliceblue;
+  align-items: center;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+#loginNavlink:hover{
+  width: 15vw;
+  height: 5vh
+}
+#loginMsg{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+}
+#Post{
+  border-radius: 25px;
+  text-decoration: none;
+}
+#mainProfile{
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  align-items: center;
+}
+#notLogged{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+#notLoggedNavlinks{
+  width: 100vw;
+
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+}
+#NavBtn{
+  display: flex;
+  height: 6vh;
+  width: 8vw;
+  background-color: #BE161E;
+  color: aliceblue;
+  text-decoration: none;
+ justify-content: center;
+ align-items: center;
+ border-radius: 20px;
+}
+#NavBtn:hover{
+  box-shadow: 2px 2px rgba(188, 19, 27, 0.2);
+
+}
+#postQuestionSuccessMsg{
+
+  
+  margin-top: 30px;
+  border-radius: 15px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #00C853;
+  width: 30vw;
+  height: 17vh;
+  z-index: 9999;
+ box-shadow:  4px 4px 4px 4px rgba(5, 234, 35, 0.3);;
+ 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#answerQuestion{
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  text-align: start;
+
+}
+#mappedQuestions{
+  margin-left: 40px;
+  width: 35vw;
+  border-radius: 15px;
+  height: 7vh;
+  margin-bottom:10px
+}
+#fontQuestions{
+  font-size: 1.3rem;
+}
+#answerQuestionBtn{
+  display: flex;
+  justify-content: center;
+  width: 10vw;
+  
+}
+#answerComponent{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#answerComponent h2{
+  margin-bottom: 20px;
+}
+#answerBtn{
+  background-color: #15971b;
+  color: aliceblue;
+  border-radius: 15px;
+  width: 10vw;
+  height: 4vh;
+  border: none;
+}
+#showAnwers{
+background: none;
+ border: none;
+  color:black;
+  height: 3.5vh;
+  font-style: italic;
+}
+#mainEditPg{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+#setToAlign{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#editInput{
+  width: 35vw;
+  height: 2vw;
+  border-radius: 5px;
+  border: 2px solid;
+}
+#lablesOfInput{
+  width: 6vw;
+  margin-right: 15px;
+  font-size: 20px;
+}
+#editTextArea{
+  width: 35vw;
+}
+#editProfileSuccess{
+  margin-top: 30px;
+  border-radius: 15px;
+  opacity: 0.8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #00C853;
+  width: 30vw;
+  height: 17vh;
+  flex-direction: column;
+}
+#personalImage {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+#personalImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+#sizeImg{
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #BE161E;
+ }
+#aboutMe{
+  width: 70vw;
+  line-height: 30px;
+  letter-spacing: 1px;
+}
+#usersMainProperties{ 
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+#usersMainProperties h4{
+  font-weight: normal;
+}
+#usersMainProperties h3{
+  font-size: 2rem;
+  font-weight: normal;
+}
+#headingProfile{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  align-items: center;
+}
+#details{
+  font-weight: normal;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 6vh;
+  font-size:2rem;
+}
+#tailSpin{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  height: 60vh;
+}
+#editBtn{
+  margin-top: 15px;
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-bottom: 20px;
+  margin-left: 40px;
+}
+#mainProf{
+  gap: 10px;
+}
+#navEdit{
+  background-color: #BE161E;
+  width: 9vw;
+  height: 4vh;
+  border-radius: 20px;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#navEdit:hover{
+  width: 10vw;
+  height: 5vh;
+}
+#showMore{
+ background-color: #15971b;
+ color: white;
+ height: 4vh;
+ width: 7vw;
+ border-radius: 20px;
+}
+#ShowLessBtn{
+background-color: #BE161E;
+height: 4vh;
+width: 7vw;
+border-radius: 20px;
+margin-top: 10px;
+color: white;
+}
+#mappingAnswers{
+  margin-bottom: 10px;
+  line-height: 30px;
+   width: 40vw;
+  
+   
+}
+#mappingAnswers p{
+  font-style: italic;
+  margin-left: 15px;
+}
+#mappingAnswers li{
+  font-size: larger;
+  list-style: none;
+  margin-left: 5px;
+  width: 40vw;
+  letter-spacing: 1px;
+   
+  word-wrap: break-word;
+  white-space: normal;
+  
+}
+*{
+  box-sizing: border-box;
+}
+.faBars{
+  font-size: 15px;
+  margin-right: 10px;
+}
+#btnToIcvon{
+  background: none;
+  border: none;
+}
+#displayAnsAlign{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 3px solid #BE161E;
+  border-left: 4px solid #BE161E;
+  border-top: 2px solid #BE161E;
+  justify-content: space-between;
+  border-radius: 15px;
+
+  box-sizing: border-box;
+  word-wrap: break-word;
+  white-space: normal;
+  line-height: 2.5rem;
+}
+#optionsDiv{
+  display: flex;
+  z-index: 9999;
+  gap: 15px;
+  border-radius: 25px;
+  justify-content: center;
+}
+#optionsDiv button{
+  background: none;
+  border: none;
+}
+.optionsIcon{
+  font-size: large;
+}
+#delAnsSucc{
+  z-index: 9999;
+  background-color: #BE161E;
+  color: white;
+  width: 17vw;
+  height:10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  box-shadow:3px, 3px, 3px rgba(5, 234, 35, 0.3);
+}
+#editMsg{
+  z-index: 9999;
+  background-color: #00C853;
+  color: white;
+  width: 17vw;
+  height:10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  box-shadow:3px, 3px, 3px rgba(5, 234, 35, 0.3);
+}
+#ClickToAddAns{
+  margin: 15px 10px
+}
+#takeAns{
+  border-radius: 10px;
+  border: 2px solid #BE161E ;
+  padding-left: 5px;
+  padding-top: 5px;
+}
+#NoAnsYet{
+  font-style: italic;
+}
+#publishAns{
+  height: 4vh;
+  background-color: #BE161E;
+  color: white;
+  margin-left: 10px;
+  border-radius: 15px;
+  width: 7vw;
+}
+#ClickToAddAns{
+  background-color: #00C853;
+  border: none;
+  height: 4vh;
+  color: white;
+  width: 10vw;
+  border-radius: 15px;
+}
+#lisAns{
+  width: 30vw;
+  display: flex;
+
+}
+#Vote{
+  display: flex;
+  width: 40vw;
+  justify-content: space-between;
+  padding: 5px;
+}
+#upDownVote{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  width: 7vw;
+}
+#thumbs{
+  background: none;
+  transition: transform 0.3s ease;
+  border: none;
+}
+#thumbs.clicked{
+
+  transform: scale(1.2);
+}
+.thumbs{
+  font-size: large;
+  color: #00C853;
+}
+
+.thums{
+  font-size: large;
+  color: #BE161E;
+}
+@media (max-width: 768px) {
+  #navBar{
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
   }
-  to {
-    transform: rotate(360deg);
+  #sizeImg{
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #BE161E;
+    margin-left: 20px;
+   }
+  #Post{
+    width: 114px;
+    height: 4vh;
+    font-size: 0.6rem;
   }
+  #loginBtn{
+  width: 17vw;
+  }
+  #navBar2{
+    align-items: center;
+    font-size: 12px;
+    justify-content: space-between;
+    gap: 60px;
+  }#howItWorks{
+
+  
+    font-size: 12px;
+  gap: 5px;
+  }#nameofWebApp{
+    font-size: 1rem;
+  }#browseQuestions{
+    font-size: 0.8rem;
+   
+  }
+  
+  #Already{
+    font-size: 1rem;
+  }#loginNavlink{
+    width: 22vw;
+  }#join{
+    width: 22vw;
+  }
+  #alignH-Inp input{
+    width: 60vw;
+  }
+  #mappedQuestions{
+    width: 60vw;
+    margin-bottom: 20px;
+  }
+  #fontQuestions{
+    font-size: 1rem;
+  }#answerBtn{
+    width: 27vw;
+    font-size: 0.55rem;
+    border-radius: 5px;
+  }
+  #showMore{
+    width: 27vw;
+  }
+  #ShowLessBtn{
+    width: 27vw;
+  }
+  #questionInAnsComp{
+    font-size: 1.1rem;
+  }
+  #displayAnsAlign{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 2px solid #BE161E;
+    border-left: 3px solid #BE161E;
+    border-top: 1px solid #BE161E;
+    justify-content: space-between;
+    border-radius: 15px;
+    line-height: 1.5rem;
+  
+  }
+  #mappingAnswers{
+    margin-bottom: 10px;
+    line-height: 30px;
+     width: 60vw;
+    
+  }
+   #addQuestion{
+    font-size: 1.5rem;
+   }
+   #postQuestion h3{
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+   }
+  #publishAns{
+    width: 20vw;
+  }
+  #ClickToAddAns{
+    width: 17vw;
+  }
+  #editBtn{
+    margin-top: 15px;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: end;
+    width: 100%;
+    padding-right: 50px;
+  }
+  #headingProfile h2{
+  font-size:1.4rem;
+  }
+  #navEdit{
+    width: 27vw;
+  }
+  #displayAnsAlign li{
+    font-size: 1rem;
+  }
+  #questionTitle input{
+   width: 60vw;
+  }
+  #questionTitle select{
+  width: 60vw;
+  }
+  #publishQuestion{
+    width: 27vw;
+  }
+  #usersMainProperties h3{
+    font-size: 1.5rem;
+  }
+  #mainEditPg h1{
+    font-size: 1.5rem;
+  }
+  #mainEditPg h2{
+    font-size: 1.3rem;
+  }
+  #setToAlign {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70vw;
+  }
+  #setToAlign input{
+    width: 60vw;
+    height: 4vh;
+    border: 1px solid black;
+  }
+  #lablesOfInput{
+    width: 37vw;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+  #NavBtn{
+    width: 27vw;
+  }
+  #Q{
+    font-size: 1.5rem;
+  }
+  #guide{
+    font-size: 1.2rem;
+    padding: 10px;
+  }
+  #labelAlign input{
+  height: 4vh;
+  width: 65vw;
+}
+}
+#labelAlign{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+#Input{
+  width: 10vw;
+}
+#questionTitle{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+#optsBtn{
+  background: none;
+  border: none;
+}
+#optDiv{
+  display: flex;
+  gap: 5px;
+}
+.optionsQuesEdit{
+  color: #15971b;
+}
+.optionsQuesDel{
+  color: #BE161E;
+}
+#delSucc{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #BE161E;
+  color: white;
+  width: 35vw;
+  height: 10vh;
+  border-radius: 15px;
+  margin-bottom: 10px;
 }
